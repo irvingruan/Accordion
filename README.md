@@ -1,7 +1,6 @@
 Accordion
 ==========================
 
-
 About
 -----
 Accordion is a ID3[1] tag reader and writer implemented purely in
@@ -13,6 +12,7 @@ Forked from [pytagger](http://www.liquidx.net/pytagger/).
 Usage
 -----
 To extract the tag info from a MP3 using the tool, simply run:
+
 `./accordion.py path/to/file.mp3`
 
 As a library, just add inside whichever Python file you are using Accordion:
@@ -25,13 +25,13 @@ file as constructors:
 
 Once the file is parsed, you can access the internal structures as:
 
-ID3v2.tag <-- Properties of the ID3v2 tag
+* ID3v2.tag <-- Properties of the ID3v2 tag
   
-ID3v2.frames <-- A list of frames objects present in the tag
+* ID3v2.frames <-- A list of frames objects present in the tag
    
-ID3v2Frame.fid <-- frame ID, either 3 or 4 character string
+* ID3v2Frame.fid <-- frame ID, either 3 or 4 character string
    
-ID3v2Frame.fields <-- a tuple of frames
+* ID3v2Frame.fields <-- a tuple of frames
 
 You can directly remove/edit/replace the frames and tag information
 in the class and then commit to disk by executing:
