@@ -1,56 +1,6 @@
 #!/usr/bin/env python
 
-"""
-Accordion
-
-Pure Python ID3v1/v2 Tag Parser/Writer
---------------------------------------
-
-This is an implementation purely in Python. You can use Python bindings
-to existing libraries such as id3lib or libid3tag (from libmad.) The
-reason for using this is because you can easily modify how fields are
-parsed and make your own customisations and hacks around dodgy files.
-
-The sole reason this exists is because I found that different ID3
-implementations were incompatible with each other because of the
-sketchy standards from id3.org. Specifically, I was trying to massage
-MP3s with Chinese tags encoded in either BIG5 or UTF-8 to iTunes format.
-iTunes stores its ID3v2 tags using UTF-16 and ID3v1 tags using native
-encoding (BIG5) or untouched. On the other hand, libid3tag stores tags
-in UTF-8 but forgets to set the encoding bit properly, so other programs
-cannot parse the tags properly (or believe they are invalid).
-
-I'll document quirks as I find them for each player I come across, but
-for now, I only use Linux and MacOSX, which means I can only play around
-with *nix libraries such as id3lib and libid3tag and iTunes.
-
-The parser is based on the specifications for ID3v1.1 and ID3v2.4.
-Support for older ID3v2.2/3 tags is planned. Currently, this only works
-on tags for MP3 files.
-
-
-Usage
------
-
-There are 2 simple classes, ID3v2 and ID3v1. They both take an MP3
-file as constructors:
-
-   id3file = ID3v2('Song.mp3')
-
-Once the file is parsed, you can access the internal structures as:
-
-   ID3v2.tag    <--- Properties of the ID3v2 tag
-   ID3v2.frames <--- A list of frames objects present in the tag
-   ID3v2Frame.fid    <-- frame ID, either 3 or 4 character string
-   ID3v2Frame.fields <-- a tuple of frames
-
-You can directly remove/edit/replace the frames and tag information
-in the class and then commit to disk by executing:
-
-   id3file.commit()
-
-"""
-
+# See README for instructions
 
 import os
 import sys
