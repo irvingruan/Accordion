@@ -16,6 +16,7 @@ To extract the tag info from a MP3 using the tool, simply run:
 `./accordion.py path/to/file.mp3`
 
 As a library, just add inside whichever Python file you are using Accordion:
+
 `import accordion`
 
 There are two simple classes, ID3v2 and ID3v1. They both take a MP3
